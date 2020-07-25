@@ -1,0 +1,15 @@
+scalar DateTime
+
+"""
+Query
+"""
+type Query {
+  projects: [Project!]!
+}
+
+"""
+Mutation
+"""
+type Mutation {
+  createProject(input: ProjectInput!): Boolean!
+}

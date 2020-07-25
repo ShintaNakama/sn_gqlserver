@@ -1,0 +1,65 @@
+"""
+project
+"""
+type Project {
+  """
+  ID
+  """
+  id: ID!
+  """
+  プロジェクト名
+  """
+  name: String!
+  """
+  プロジェクトの内容
+  """
+  description: String
+  """
+  プロジェクト作成日
+  """
+  createdAt: DateTime!
+  """
+  プロジェクト更新日
+  """
+  updatedAt: DateTime!
+  """
+  プロジェクト完了ステータス
+  """
+  completed: CompletedType!
+}
+
+"""
+project パラメータ
+"""
+input ProjectInput {
+  """
+  ID
+  """
+  id: ID!
+  """
+  プロジェクト名
+  """
+  name: String!
+  """
+  プロジェクトの内容
+  """
+  description: String
+  """
+  プロジェクト完了ステータス
+  """
+  completed: CompletedType!
+}
+
+"""
+Completed タイプ
+"""
+enum CompletedType {
+  """
+  完了
+  """
+  COMPLETE
+  """
+  未完了
+  """
+  NOTCOMPLETE
+}
